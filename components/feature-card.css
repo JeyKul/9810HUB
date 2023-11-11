@@ -7,7 +7,6 @@
   border-radius: var(--dl-radius-radius-radius8);
   flex-direction: row;
   justify-content: flex-start;
-  background-color: var(--dl-color-gray-white);
 }
 .feature-card-icon {
   fill: var(--dl-color-primary1-blue80);
@@ -27,6 +26,7 @@
   font-family: "Raleway";
   font-weight: 600;
   line-height: 28px;
+  background-color: #4f4f4f;
 }
 .feature-card-text1 {
   color: var(--dl-color-gray-800);
