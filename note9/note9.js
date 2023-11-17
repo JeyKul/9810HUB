@@ -1,8 +1,6 @@
-// Function to load specifications
 function loadSpecifications(specs) {
     const specsList = document.querySelector('.specs ul');
   
-    // Clear existing content
     specsList.innerHTML = '';
   
     specs.forEach(spec => {
@@ -20,7 +18,6 @@ function loadSpecifications(specs) {
       }
       const fileListText = await response.text();
   
-      // Extract JSON file links from HTML
       const jsonFileLinks = Array.from(
         fileListText.matchAll(/<a href="([^"]+\.json)">/g),
         match => match[1]
@@ -35,20 +32,16 @@ function loadSpecifications(specs) {
     }
   }
   
-  // Function to load ROMs
   async function loadROMs() {
     const romsContainer = document.querySelector('.roms');
   
-    // Clear existing content
     romsContainer.innerHTML = '';
   
     try {
         const romFiles = await fetchFileList('./roms', '.json');
         console.log('ROM Files:', romFiles);
         
-        // Load ROM data for each file
         for (const romFileName of romFiles) {
-          // Fetch ROM file data
           const romResponse = await fetch(`./roms/${romFileName}`);
           if (!romResponse.ok) {
             console.error(`Error loading ROM file (${romFileName}): ${romResponse.statusText}`);
@@ -91,7 +84,6 @@ function loadSpecifications(specs) {
     }
   }
   
-  // Function to fetch the list of ROMs
   async function fetchROMsList() {
     try {
       const response = await fetch('./roms/roms.json');
@@ -106,9 +98,7 @@ function loadSpecifications(specs) {
     }
   }
   
-  // Load specifications and ROMs when the page is loaded
   document.addEventListener('DOMContentLoaded', () => {
-    // Fetch specifications data
     fetch('./specs.json')
       .then(response => response.json())
       .then(specificationsData => {
@@ -116,7 +106,6 @@ function loadSpecifications(specs) {
       })
       .catch(error => console.error('Error loading specifications:', error));
   
-    // Load ROMs data
-    loadROMs(); // Change this line to use the correct function name
+    loadROMs();
   });
   

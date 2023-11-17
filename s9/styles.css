@@ -81,21 +81,21 @@ body {
   text-decoration: none;
   border-radius: 20px;
   margin-top: 15px;
-  margin-right: 10px; /* Adjust as needed to add spacing between buttons */
-  transition: background-color 0.3s; /* Add transition for smooth color change */
+  margin-right: 10px;
+  transition: background-color 0.3s;
 }
 
 .rom-button:hover {
-  background-color: #6a1d9e; /* Darker color when hovering */
+  background-color: #6a1d9e;
 }
 
 @media only screen and (max-width: 600px) {
   .phone-details {
-    flex-direction: column; /* Change to column layout on smaller screens */
-    align-items: center; /* Center items horizontally */
+    flex-direction: column;
+    align-items: center;
   }
 
   .specs {
-    margin-top: 15px; /* Add margin between phone photo and specs on smaller screens */
+    margin-top: 15px;
   }
 }

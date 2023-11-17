@@ -20,11 +20,11 @@ body {
   }
   
   .device-box {
-    flex: 0 0 calc(25% - px); /* 25% width with 10px margin between boxes */
+    flex: 0 0 calc(25% - px);
     background-color: #232323;
     border-radius: 15px;
     padding: 20px;
-    margin:  15px 5px 0; /* Adjust the margin between boxes */
+    margin:  15px 5px 0;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     text-align: center;
     max-width: 300px;
