@@ -1,0 +1,11 @@
+[
+  { "name": "Display", "value": "6,4 inches Super AMOLED" },
+  { "name": "Processor", "value": "Exynos 9810" },
+  { "name": "RAM", "value": "6GB or 8GB" },
+  { "name": "Storage", "value": "128GB, and 512GB" },
+  { "name": "Camera 1 back", "value": "12 MP, f/1.5-2.4, 26mm (wide)" },
+  { "name": "Camera 2 back ", "value": "12 MP, f/2.4, 52mm (telephoto)" },
+  { "name": "Camera front ", "value": "8 MP, f/1.7, 25mm (wide)" },
+  { "name": "Battery", "value": "4000mAh" },
+  { "name": "Operating System", "value": "Android 8.0 (Oreo), upgradable to Android 10" }
+]

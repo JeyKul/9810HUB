@@ -1,0 +1,11 @@
+{
+  "headerPhoto": "https://images.pling.com/img/00/00/64/43/64/1755231/photo-2022-04-05-14-25-41.jpg",
+  "name": "crDroid",
+  "description": "A custom ROM for your device",
+  "buttons": [
+    {
+      "link": "https://example.com",
+      "text": "Download"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 [
     { "name": "Display", "value": "5.8 inches Super AMOLED" },
-    { "name": "Processor", "value": "Snapdragon 845" },
+    { "name": "Processor", "value": "Exynos 9810" },
     { "name": "RAM", "value": "4GB" },
     { "name": "Storage", "value": "64GB" },
     { "name": "Camera", "value": "12MP (main), 8MP (front)" },

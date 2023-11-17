@@ -1,0 +1,23 @@
+{
+  "headerPhoto": "url to photo",
+  "name": "rom name",
+  "description": "description for rom",
+  "buttons": [
+    {
+      "link": "link for button",
+      "text": "button name"
+    },
+    {
+      "link": "link for button",
+      "text": "feel free"
+    },
+    {
+      "link": "link for button",
+      "text": "to add"
+    },
+    {
+      "link": "link for button",
+      "text": "more buttons"
+    }
+  ]
+}

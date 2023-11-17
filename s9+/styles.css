@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1f1e1e;
+  color: #fff;
+}
+
+.phone-details {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.phone-photo {
+  max-width: 40%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.specs {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.specs h2 {
+  font-size: 1.5em;
+}
+
+.specs ul {
+  list-style: none;
+  padding: 0;
+}
+
+.specs li {
+  margin-bottom: 10px;
+}
+
+.roms {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #232323;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.roms h2 {
+  font-size: 1.5em;
+}
+
+.roms .rom-box {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 10px;
+}
+
+.rom-box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.rom-box h3 {
+  margin-top: 10px;
+}
+
+.rom-box p {
+  margin-top: 10px;
+}
+
+.rom-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #8a2be2;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  margin-top: 15px;
+  margin-right: 10px; /* Adjust as needed to add spacing between buttons */
+  transition: background-color 0.3s; /* Add transition for smooth color change */
+}
+
+.rom-button:hover {
+  background-color: #6a1d9e; /* Darker color when hovering */
+}
+
+@media only screen and (max-width: 600px) {
+  .phone-details {
+    flex-direction: column; /* Change to column layout on smaller screens */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .specs {
+    margin-top: 15px; /* Add margin between phone photo and specs on smaller screens */
+  }
+}
