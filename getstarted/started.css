@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1f1e1e;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .device-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px 30px;
+  }
+  
+  .device-box {
+    flex: 0 0 calc(25% - px); /* 25% width with 10px margin between boxes */
+    background-color: #232323;
+    border-radius: 15px;
+    padding: 20px;
+    margin:  15px 5px 0; /* Adjust the margin between boxes */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+  }
+  
+  .device-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .device-button {
+    display: block;
+    width: 50%;
+    margin: 15px auto;
+    padding: 10px;
+    background-color: #8a2be2;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    margin-top: 15px;
+  }

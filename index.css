@@ -15,6 +15,7 @@
   height: 2rem;
   flex-shrink: 0;
   margin-right: var(--dl-space-space-oneandhalfunits);
+  fill: #ff0000;
 }
 .feature-card-container {
   gap: var(--dl-space-space-unit);
