@@ -10,24 +10,17 @@ function loadSpecifications(specs) {
     });
   }
   
-  async function fetchFileList(folderPath) {
+  async function fetchROMFileList() {
     try {
-      const response = await fetch(folderPath);
+      const response = await fetch('./roms.txt');
       if (!response.ok) {
-        throw new Error(`Error fetching file list: ${response.statusText}`);
+        throw new Error(`Error fetching ROM file list: ${response.statusText}`);
       }
-      const fileListText = await response.text();
-  
-      const jsonFileLinks = Array.from(
-        fileListText.matchAll(/<a href="([^"]+\.json)">/g),
-        match => match[1]
-      );
-  
-      console.log('JSON Files:', jsonFileLinks);
-  
-      return jsonFileLinks;
+      const fileList = await response.text();
+      console.log('ROM File List:', fileList);
+      return fileList.split('\n').filter(Boolean);
     } catch (error) {
-      console.error('Error fetching file list:', error);
+      console.error('Error fetching ROM file list:', error);
       return [];
     }
   }
@@ -38,17 +31,17 @@ function loadSpecifications(specs) {
     romsContainer.innerHTML = '';
   
     try {
-        const romFiles = await fetchFileList('./roms', '.json');
-        console.log('ROM Files:', romFiles);
-        
-        for (const romFileName of romFiles) {
-          const romResponse = await fetch(`./roms/${romFileName}`);
-          if (!romResponse.ok) {
-            console.error(`Error loading ROM file (${romFileName}): ${romResponse.statusText}`);
-            continue;
-          }
-        
-          const romData = await romResponse.json();
+      const romFiles = await fetchROMFileList();
+      console.log('ROM Files:', romFiles);
+  
+      for (const romFileName of romFiles) {
+        const romResponse = await fetch(`./roms/${romFileName}`);
+        if (!romResponse.ok) {
+          console.error(`Error loading ROM file (${romFileName}): ${romResponse.statusText}`);
+          continue;
+        }
+  
+        const romData = await romResponse.json();
   
         const romBox = document.createElement('div');
         romBox.classList.add('rom-box');
@@ -81,20 +74,6 @@ function loadSpecifications(specs) {
       }
     } catch (error) {
       console.error('Error loading ROMs:', error);
-    }
-  }
-  
-  async function fetchROMsList() {
-    try {
-      const response = await fetch('./roms/roms.json');
-      if (!response.ok) {
-        throw new Error(`Error fetching ROMs list: ${response.statusText}`);
-      }
-      const romsList = await response.json();
-      return romsList;
-    } catch (error) {
-      console.error('Error fetching ROMs list:', error);
-      return [];
     }
   }
   
