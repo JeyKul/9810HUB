@@ -1,0 +1,20 @@
+{
+  "headerPhoto": "../../roms/voltage/banner.jpg",
+  "name": "VoltageOS",
+  "description": "crDroid is designed to increase performance and reliability over stock Android for your device also attempting to bringing many of the best features existent today.",
+  "buttons": [
+    {
+      "link": "https://qiwi.gg/folder/65487c6d9f5d5da8dfbb6113",
+      "text": "Download"
+    },
+    {"link": "https://telegra.ph/Notes-10-24-6",
+     "text": "Notes"
+    },
+    {"link": "https://github.com/VoltageOS",
+     "text": "Source"
+    },
+    {"link": "https://github.com/samsungexynos9810/",
+     "text": "Device Tree"
+    }
+  ]
+}

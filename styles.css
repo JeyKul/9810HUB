@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #121212; /* Dark background color */
+  color: #ffffff; /* Text color */
+}
+
+.navbar {
+  background-color: #333; /* Navbar background color */
+  padding: 30px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  border-radius: 0 0 15px 15px; /* Rounded edges for the top */
+  z-index: 1;
+}
+
+.logo img {
+  border-radius: 50%; /* Make the logo image rounded */
+}
+
+.card {
+  text-decoration: none;
+  margin: 5px;
+  background-color: rgba(24, 24, 24, 0.1);
+  border-radius: 8px; /* Adjust the border-radius for smaller borders */
+  overflow: hidden;
+  position: relative;
+  width: calc(33.33% - 10px); /* Adjust the width as needed */
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.content {
+  margin-top: 70px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribute cards evenly in the container */
+
+}
+
+.card:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Add a glowing effect on hover */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card-link {
+  color: #ffffff;
+  padding: 10px;
+  display: block;
+  text-align: center;
+}
+
+/* Media query for larger screens */
+@media only screen and (min-width: 600px) {
+  .card {
+    width: calc(33.33% - 10px); /* Three cards per row on larger screens */
+  }
+}
+
+/* Media query for even larger screens */
+@media only screen and (min-width: 900px) {
+  .card {
+    width: calc(25% - 10px); /* Four cards per row on even larger screens */
+  }
+}
+
+.card-content {
+  text-align: center;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+footer {
+  background-color: #33333300; /* Footer background color */
+  color: #747474; /* Text color */
+  padding: 10px;
+  text-align: center;
+  bottom: 0;
+}

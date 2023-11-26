@@ -1,0 +1,19 @@
+{
+  "headerPhoto": "../../roms/pe/banner.jpg",
+  "name": "Pixel Experience",
+  "description": "Pixel Experience is an AOSP based ROM, with Google apps included and all Pixel goodies (launcher, wallpapers, icons, fonts, bootanimation).",
+  "buttons": [
+    {
+      "link": "https://get.pixelexperience.org/star2lte",
+      "text": "Download"
+    },
+    {
+      "link": "https://github.com/PixelExperience",
+      "text": "Source"
+    },
+    {
+      "link": "https://github.com/samsungexynos9810/",
+      "text": "Device Trees"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+[
+    {"image": "./phones/9810.svg", "link": "./getstarted/getstarted.html", "text": "Phones"},
+    {"image": "./phones/tutorials.svg", "link": "./tutorials/tutorials.html", "text": "Tutorials"},
+    {"image": "./phones/9810.svg", "link": "https://www.google.de", "text": "Q&A"},
+    {"image": "./phones/9810.svg", "link": "https://www.google.de", "text": "galaxy"},
+    {"image": "./phones/9810.svg", "link": "https://www.google.de", "text": "galaxy"},
+    {"image": "./phones/9810.svg", "link": "https://www.google.de", "text": "galaxy"},
+    {"image": "./phones/9810.svg", "link": "https://www.google.de", "text": "galaxy"}
+
+]

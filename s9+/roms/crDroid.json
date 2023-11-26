@@ -1,11 +1,23 @@
 {
   "headerPhoto": "https://images.pling.com/img/00/00/64/43/64/1755231/photo-2022-04-05-14-25-41.jpg",
   "name": "crDroid",
-  "description": "A custom ROM for your device",
+  "description": "crDroid is designed to increase performance and reliability over stock Android for your device also attempting to bringing many of the best features existent today.",
   "buttons": [
     {
-      "link": "https://example.com",
+      "link": "https://crdroid.net/star2lte/9",
       "text": "Download"
+    },
+    {"link": "https://raw.githubusercontent.com/crdroidandroid/android_vendor_crDroidOTA/13.0/changelog_star2lte.txt",
+     "text": "Changelog"
+    },
+    {"link": "https://github.com/crdroiandroid",
+     "text": "Source"
+    },
+    {"link": "https://github.com/samsungexynos9810/",
+     "text": "Device Tree"
+    },
+    {"link": "https://forum.xda-developers.com/t/rom-13-crdroid-android-9-x-for-samsung-galaxy-s9-s9-n9.4560457/",
+     "text": "XDA"
     }
   ]
 }
