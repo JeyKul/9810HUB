@@ -15,6 +15,10 @@ body {
   margin-bottom: -100vh;
 }
 
+#logo{
+  height: 40px
+}
+
 #navbar {
   display: flex;
   justify-content: space-between;

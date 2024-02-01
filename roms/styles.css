@@ -12,6 +12,11 @@ body {
     justify-content: center; /* Center horizontally if not enough room for all boxes */
 }
 
+#logo{
+    height: 40px;
+    filter: invert(.75);
+  }
+
 .box {
     width: 300px;
     margin: 20px;
