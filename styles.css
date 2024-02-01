@@ -1,85 +1,105 @@
 body {
   margin: 0;
-  padding: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #121212; /* Dark background color */
-  color: #ffffff; /* Text color */
+  overflow-x: hidden;
+  background-color: #292228;
 }
 
-.navbar {
-  background-color: #333; /* Navbar background color */
-  padding: 30px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  border-radius: 0 0 15px 15px; /* Rounded edges for the top */
-  z-index: 1;
-}
-
-.logo img {
-  border-radius: 50%; /* Make the logo image rounded */
-}
-
-.card {
-  text-decoration: none;
-  margin: 5px;
-  background-color: rgba(24, 24, 24, 0.1);
-  border-radius: 8px; /* Adjust the border-radius for smaller borders */
-  overflow: hidden;
+.gradient-background {
   position: relative;
-  width: calc(33.33% - 10px); /* Adjust the width as needed */
-  box-sizing: border-box; /* Include padding and border in the width */
+  height: 97vh;
+  background: linear-gradient(to bottom left, #3a0c3a, #914991, #6d396a, #23215b );
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: -100vh;
 }
 
-.content {
-  margin-top: 70px;
-  padding: 10px;
+#navbar {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; /* Distribute cards evenly in the container */
-
+  justify-content: space-between;
+  align-items: center;
 }
 
-.card:hover {
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Add a glowing effect on hover */
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.card-link {
+.button1{
+  background-color: #292228;
+  border: none;
+  border-radius: 40px;
   color: #ffffff;
+  cursor: pointer;
+  padding: 10px 15px;
+  margin: 0 10px;
+  transition: background-color 0.3s, border-radius 0.3s; /* Add transition */
+}
+
+.button1:hover{
+  background-color: #a2a9bd;
+  border-radius: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 42%;
+  left: 80%;
+  transform: translateX(-50%);
+}
+
+.button-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.button-list li {
+  margin: 10px;
+}
+
+.button2 {
+  background-color: #d8e2ff;
+  border: none;
+  border-radius: 40px;
+  color: #000000;
+  cursor: pointer;
+  padding: 10px 15px;
+  transition: background-color 0.3s, border-radius 0.3s; /* Add transition */
+}
+
+.button2:hover {
+  background-color: #a2a9bd;
+  border-radius: 10px;
+}
+
+#logocenter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 45%;
+  left: 20%;
+  width: 400px
+}
+
+#fileList {
+  margin-top: 100vh; /* Adjust this value to control the space between the header and the dynamic content */
+}
+
+.fileList {
+  text-align: left;
+}
+
+.fileItem {
   padding: 10px;
-  display: block;
-  text-align: center;
+  margin: 10px;
+  border-radius: 10px;
+  display: inline-block;
 }
 
-/* Media query for larger screens */
-@media only screen and (min-width: 600px) {
-  .card {
-    width: calc(33.33% - 10px); /* Three cards per row on larger screens */
-  }
-}
-
-/* Media query for even larger screens */
-@media only screen and (min-width: 900px) {
-  .card {
-    width: calc(25% - 10px); /* Four cards per row on even larger screens */
-  }
-}
-
-.card-content {
-  text-align: center;
-}
-
-.card-image {
-  width: 100%;
-  height: auto;
-  border-radius: 15px;
-}
-
-footer {
-  background-color: #33333300; /* Footer background color */
-  color: #747474; /* Text color */
-  padding: 10px;
-  text-align: center;
-  bottom: 0;
+#modeSwitch {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
 }

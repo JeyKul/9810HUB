@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+    font-size: 24px; /* Adjust the font size as needed */
+    margin-bottom: 20px; /* Adjust the spacing between text and images */
+}
+
+.image-container {
+    display: flex;
+}
+
+.image-container a {
+    margin-right: 20px; /* Adjust the spacing between images */
+}
+
+.image-container img {
+    width: 400px; /* Set the width of your images */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container img:hover {
+    transform: scale(1.1); /* Add a slight zoom effect on hover */
+}

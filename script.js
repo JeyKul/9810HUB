@@ -1,32 +1,67 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // Load JSON data
-    fetch('data.json')
-        .then(response => response.json())
-        .then(data => buildContent(data));
-});
-
-function buildContent(data) {
-    const contentContainer = document.getElementById('content');
-
-    data.forEach(item => {
-        const tr = document.createElement('td');
-        const td = document.createElement('td');
-        const card = document.createElement('a'); // Use an anchor element
-        card.classList.add('card');
-        card.href = item.link; // Set the link for the entire card
-
-        const image = document.createElement('img');
-        image.classList.add('card-image');
-        image.src = item.image;
-        image.alt = item.text;
-
-        const link = document.createElement('div'); // Use a div for the link text
-        link.classList.add('card-link');
-        link.textContent = item.text;
-
-        card.appendChild(image);
-        card.appendChild(link);
-
-        contentContainer.appendChild(card);
-    });
+async function fetchRoms() {
+  try {
+    const response = await fetch('roms.json');
+    return await response.json();
+  } catch (error) {
+    console.error('Error fetching ROMs:', error);
+    return [];
+  }
 }
+
+function displayRoms(roms) {
+  const fileList = document.getElementById('fileList');
+  roms.sort((a, b) => new Date(b.lastUpdated) - new Date(a.lastUpdated));
+
+  roms.forEach(rom => {
+    const romItem = document.createElement('div');
+    romItem.classList.add('fileItem');
+
+    const romImage = document.createElement('img');
+    romImage.src = rom.image;
+    romImage.alt = rom.name;
+    romItem.appendChild(romImage);
+
+    const romName = document.createElement('p');
+    romName.textContent = rom.name;
+    romItem.appendChild(romName);
+
+    const lastUpdated = document.createElement('p');
+    lastUpdated.textContent = `Last Updated: ${rom.lastUpdated}`;
+    romItem.appendChild(lastUpdated);
+
+    fileList.appendChild(romItem);
+  });
+}
+
+function adjustColors(backgroundImageUrl) {
+  const colorThief = new window.ColorThief();
+  const img = new Image();
+  img.src = backgroundImageUrl;
+
+  img.onload = function () {
+    const dominantColor = colorThief.getColor(img);
+
+    document.body.style.backgroundColor = `rgb(${dominantColor[0]}, ${dominantColor[1]}, ${dominantColor[2]})`;
+
+    const buttons = document.querySelectorAll('.button');
+    buttons.forEach(button => {
+      button.style.backgroundColor = `rgb(${dominantColor[0]}, ${dominantColor[1]}, ${dominantColor[2]})`;
+      button.style.color = '#fff';
+    });
+
+    const contentText = document.querySelectorAll('#content, .fileItem p');
+    contentText.forEach(textElement => {
+      textElement.style.color = `rgb(${dominantColor[0]}, ${dominantColor[1]}, ${dominantColor[2]})`;
+    });
+  };
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+  try {
+    const roms = await fetchRoms();
+    displayRoms(roms);
+    adjustColors('Background.jpg');
+  } catch (error) {
+    console.error('Error on DOMContentLoaded:', error);
+  }
+});
