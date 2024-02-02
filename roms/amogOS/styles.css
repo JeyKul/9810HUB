@@ -33,7 +33,7 @@ h1 {
 
 .image-container a {
     align-items: center;
-    margin: 9pc; /* Adjust the spacing between images */
+    margin: 6vw; /* Adjust the spacing between images */
 }
 
 .image-container img {
