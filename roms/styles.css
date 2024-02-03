@@ -1,9 +1,12 @@
-body {
+html,body {
     margin: 0;
     font-family: 'Arial', sans-serif;
     overflow-x: hidden;
     background-color: #1d1d1df4;
     padding: 20px;
+    cursor: url('corsorsmol.png') 16 16, auto;
+    margin: 0;
+    height: 100%;
 }
 
 .container {
@@ -17,6 +20,11 @@ body {
     filter: invert(.75);
   }
 
+#logo:hover{
+  filter: drop-shadow(0 0 0.75rem #a2a9bd);
+  cursor: none;
+}
+
 .box {
     width: 300px;
     margin: 20px;
@@ -28,6 +36,7 @@ body {
     background-color: #1f1313;
     color: ghostwhite;
     overflow: hidden;
+    text-decoration: none;
 }
 
 .box img {
@@ -53,16 +62,18 @@ body {
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s, border-radius 0.3s;
+    text-decoration: none;
 }
 
 .box button:hover{
     background-color: #a2a9bd;
     border-radius: 10px;
+    cursor: none;
 }
 
 .box .phone-container {
     display: flex;
-    gap: 20px; /* Add some gap between buttons */
+    gap: 20px;
 }
 
 .box .phone {
@@ -95,6 +106,7 @@ body {
     padding: 10px 15px;
     margin: 0 10px;
     transition: background-color 0.3s, border-radius 0.3s; /* Add transition */
+    text-decoration: none;
   }
 
   .button2{
@@ -106,16 +118,19 @@ body {
     padding: 10px 15px;
     margin: 0 10px;
     transition: background-color 0.3s, border-radius 0.3s; /* Add transition */
+    text-decoration: none;
   }
   
   .button1:hover{
     background-color: #a2a9bd;
     border-radius: 10px;
+    cursor: none;
   }
 
   .button2:hover{
     background-color: #a2a9bd;
     border-radius: 10px;
+    cursor: none;
   }
   
   .button-container {
