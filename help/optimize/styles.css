@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bubbles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none; /* Allow clicks to go through the bubbles */
+}
+
+.soon-container {
+    text-align: center;
+}
+
+.soon-text {
+    color: #ffffff;
+    font-size: 150px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.bubble {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url('../img/bubble.png'); /* Replace with the path to your custom image */
+    background-size: cover;
+    border-radius: 50%;
+    animation: bubbleFloat linear infinite;
+    opacity: 0;
+}
+
+@keyframes bubbleFloat {
+    0% {
+        transform: translateY(0) translateX(-100vw) scale(1); /* Move in from the left */
+        opacity: 1; /* Gradually increase opacity */
+    }
+    100% {
+        transform: translateY(0) translateX(200vw) scale(0.8); /* Move out to the right */
+        opacity: 0; /* Gradually decrease opacity */
+    }
+}
+
+/* Add this rule to change the color dynamically */
+.colorize {
+    filter: hue-rotate(180deg); /* Adjust the hue-rotate value as needed */
+}
