@@ -4,7 +4,6 @@ html,body {
     overflow-x: hidden;
     background-color: #1d1d1df4;
     padding: 20px;
-    cursor: url('/corsorsmol.png') 16 16, auto;
     margin: 0;
     height: 100%;
 }
