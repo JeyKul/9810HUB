@@ -8,6 +8,7 @@
   flex-direction: row;
   justify-content: flex-start;
   background-color: #1f1e1e;
+  cursor: url(/corsorsmol.png)
 }
 .feature-card-icon {
   fill: var(--dl-color-primary1-blue80);
