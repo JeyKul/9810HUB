@@ -6,7 +6,6 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    cursor: url('/corsorsmol.png') 16 16, auto;
 }
 
 .container {
